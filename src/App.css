@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'cattino';
-  src: url('Cattino.ttf') format('truetype');
+  src: url('fonts/Cattino.ttf') format('truetype');
 }
 @font-face {
   font-family: 'catways';
-  src: url('Catways.ttf') format('truetype');
+  src: url('fonts/Catways.ttf') format('truetype');
 }
 
 *, *::before, *::after {
@@ -40,14 +40,21 @@ body {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 20px;
   font-size: 1em;
   font-family: 'catways', sans-serif;
 }
 
+.topBar h1 {
+  margin: 0;
+  flex-grow: 1;
+  text-align: center; 
+}
+
 #subheader{
   margin-left: 20px;
-  font-size: 1.5em;
+  font-size: .75em;
   font-family: 'cattino', sans-serif;
 }
 
@@ -100,4 +107,22 @@ body {
 
 .catSection img, .catSection h1, .catSection p{
   transform: skew(14deg);
+}
+
+
+.dogButton, .catButton{
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: 'catways'
+}
+
+.dogButton{
+  background-color: #FBAB7E;
+}
+
+.catButton{
+  background-color: #DDD6F3;
 }
