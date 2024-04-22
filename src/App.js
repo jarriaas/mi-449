@@ -108,7 +108,7 @@ function App() {
             {/* Dog popup when true */}
             {showFactsPopup === 'dog' && (
                 <FactsPopup
-                    title="5 Recent Dog Facts"
+                    title="5 Most Recent Dog Facts"
                     facts={previousDogFacts}
                     onClose={() => setShowFactsPopup(false)}
                 />
@@ -117,7 +117,7 @@ function App() {
             {/* Cat popup when true */}
             {showFactsPopup === 'cat' && (
                 <FactsPopup
-                    title="5 Recent Cat Facts"
+                    title="5 Most Recent Cat Facts"
                     facts={previousCatFacts}
                     onClose={() => setShowFactsPopup(false)}
                 />
