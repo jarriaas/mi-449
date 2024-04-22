@@ -40,15 +40,18 @@ function SplitScreenFacts() {
 
     return (
         <>
-            <div className="topBar">Pick a side to generate an Animal Fact:</div>
+            <div className="topBar">
+                <h1>Animal Fact Generator:</h1>
+                <span id="subheader">Pick a side to generate an Animal Fact</span>
+            </div>
             <div className="container" style={{ position: 'relative' }}>
                 <div className="dogSection" style={{ flex: dogSize }} onClick={handleDogClick}>
-                    <img src={dog} alt="Dog"/>
+                    <img src={dog} alt="Dog" />
                     <h1>Dog Facts</h1>
                     <p className={`factTextDog ${showDogFact ? 'visible' : ''}`}>{dogFact}</p>
                 </div>
                 <div className="catSection" style={{ flex: 100 - dogSize }} onClick={handleCatClick}>
-                    <img src={cat} alt="Cat"/>
+                    <img src={cat} alt="Cat" />
                     <h1>Cat Facts</h1>
                     <p className={`factTextCat ${showCatFact ? 'visible' : ''}`}>{catFact}</p>
                 </div>
