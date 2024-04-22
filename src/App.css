@@ -1,4 +1,12 @@
-/* Apply box-sizing globally to ensure padding and borders are included in element sizes */
+@font-face {
+  font-family: 'cattino';
+  src: url('Cattino.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'catways';
+  src: url('Catways.ttf') format('truetype');
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -8,7 +16,6 @@ html, body {
   padding: 0;
   background-color: #d2d2d2;
   background: url("https://t3.ftcdn.net/jpg/01/96/83/20/360_F_196832044_ISa3G24W2dmiW5X94hJq59Cs8uHat8I1.jpg");
-  
 }
 
 body {
@@ -22,8 +29,9 @@ body {
   justify-content: center;
 }
 
-.container h1{
+h1{
   font-size: 3em;
+  font-family: 'catways', sans-serif;
 }
 
 .topBar {
@@ -34,6 +42,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 2em;
+  font-family: 'cattino', sans-serif;
 }
 
 .bottombar {
@@ -44,6 +53,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 15px;
+    font-family: 'cattino', sans-serif;
 }
 
 .dogSection, .catSection {
@@ -57,6 +67,7 @@ body {
   opacity: 0;
   transition: opacity 1s ease;
   font-size: 1.5em;
+  font-family: 'catways', sans-serif;
 }
 
 .factTextDog.visible, .factTextCat.visible {
