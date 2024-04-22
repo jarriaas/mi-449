@@ -1,38 +1,85 @@
-.App {
+/* Apply box-sizing globally to ensure padding and borders are included in element sizes */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #d2d2d2;
+  background: url("https://t3.ftcdn.net/jpg/01/96/83/20/360_F_196832044_ISa3G24W2dmiW5X94hJq59Cs8uHat8I1.jpg");
+  
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 60px - 40px);
+  justify-content: center;
+}
+
+.container h1{
+  font-size: 3em;
+}
+
+.topBar {
+  height: 60px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.bottombar {
+    height: 40px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.dogSection, .catSection {
+  transition: flex 0.5s ease;
+  cursor: pointer;
+  padding: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.factTextDog, .factTextCat {
+  opacity: 0;
+  transition: opacity 1s ease;
+  font-size: 1.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.factTextDog.visible, .factTextCat.visible {
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dogSection {
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  transform: skew(14deg);
 }
 
-.App-link {
-  color: #61dafb;
+.dogSection img, .dogSection h1, .dogSection p{
+  transform: skew(-14deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.catSection {
+  background-color: #FAACA8;
+  background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+  transform: skew(-14deg);
+}
+
+.catSection img, .catSection h1, .catSection p{
+  transform: skew(14deg);
 }
